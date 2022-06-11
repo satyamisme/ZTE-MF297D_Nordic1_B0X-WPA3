@@ -2,7 +2,7 @@
 
 The really first wiki online for hacking the router firmware used by (Telia_ZTE_-_MF297D) delivered from ZTE. This repo will be updated very often from today's date (2022-06-11), I choose to post everything here instead of reporting cve's, as usual! I start today and we'll see how it goes, lets begin.! :)
 
-Alright, I just got the router `2022-06-11` and I saw Daniel Wong is the only guy that reported a cryptographic issues vulnerability so now we have to find a way to hurry to turn off the upgrade from 2022-06-09! No worries, I got you covered!
+Alright, I just got the router `2022-06-11` and I saw Daniel Wong is the only guy that reported a cryptographic issues vulnerability so now we have to find a way to hurry to turn off the upgrade from 2022-06-09! No worries, I got you covered! I will add everything I find, I will rewrite this wiki when I  there is time:)
 
 ### Router Info
 
@@ -10,7 +10,11 @@ I didn't add any WAN cable yet, first thing i did was to unscrew the router of c
 
 My current firmware version is: `MF297D_Nordic1_B05` - All Telia routers will be shipped with this firmware I guess.
 
-### wuseman version
+### Telia Version
+
+![Screenshot_20220611_123128](https://user-images.githubusercontent.com/26827453/173184189-ecc6ad08-7e0e-4a44-bfc9-d88ec4c8be3c.png)
+
+### Getting Started
 
 Alright, first we want is to DISABLE the autoupgrade so we will not upgrade from `MF297D_Nordic1_B05` -> `MF297D_Nordic1_B06`, 
 they forgot to disable access to tr69 it seems so turn off auto upgrade ASAP! 
