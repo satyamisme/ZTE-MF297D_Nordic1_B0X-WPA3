@@ -8,7 +8,7 @@ Alright, I just got the router `2022-06-11` and I saw Daniel Wong is the only gu
 
 I didn't add any WAN cable yet, first thing i did was to unscrew the router of course. It is brand new really! :)
 
-My current firmware version is: `MF297D_Nordic1_B05` - I saw there is a new version from 2 days ago cause the cve report, so we want to turn off the autoupgrade of course. They forgot to deny the access for this, use below command for turn off tr069:
+My current firmware version is: `MF297D_Nordic1_B05` - All Telia routers will be shipped with this firmware I guess.
 
 ### wuseman version
 
