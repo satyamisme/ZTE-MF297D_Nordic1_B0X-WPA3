@@ -58,7 +58,7 @@ curl 'http://192.168.32.1/goform/goform_set_cmd_process'  \
 
 # CVE reports by others
 
-| Date | Current Version    | News                            | Affected Version                          |
+| Date | Current Version    | Affected Version                            |  Fixed Version                          |
 | :----------------- | :----------------- | :-------------------------------- | :----------------------------------|  
 | 2022-06-09 | `MF297D`            |  MF297D_Nordic1_B05    | MF297D_Nordic1_B06                               |
 
