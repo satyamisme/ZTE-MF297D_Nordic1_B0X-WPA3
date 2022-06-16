@@ -19,6 +19,44 @@ My current firmware version is: `MF297D_Nordic1_B05` - All Telia routers will be
 Alright, first we want is to DISABLE the autoupgrade so we will not upgrade from `MF297D_Nordic1_B05` -> `MF297D_Nordic1_B06`, 
 they forgot to disable access to tr69 it seems so turn off auto upgrade ASAP! 
 
+### Login on router, no other methods works and the ones around the web is old, do as below for login:
+
+### Generate LD Token
+
+```sh
+LD="$(curl 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=LD&_=1655363462531' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure|cut -d'"' -f4)"
+```
+
+### Login
+
+{"result":"1"} = `success`
+{"result":"3"} = `invalid`
+
+```sh
+  curl 'http://192.168.32.1/goform/goform_set_cmd_process' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Origin: http://192.168.32.1' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data-raw "isTest=false&goformId=LOGIN&password=$(LD)" \
+  --compressed \
+  --insecure
+
+```console
+
+
 ### Disable tr69
 
 ... Good start - Sorry Telia! :) To avoid to upgrade to the newer version, turn off tr069 or edit the ACSURL (wich is hidden and disabled for us but they forgot to disable it)
