@@ -103,6 +103,56 @@ Due to the use of weak random values, the security of the device is reduced, and
 
 https://www.cve.org/CVERecord?id=CVE-2022-23138
 
+
+
+
+
+
+![ssg](https://user-images.githubusercontent.com/26827453/179757860-999cdd75-e749-4bcb-921c-f58e28b399d3.png)
+![ssh_fail](https://user-images.githubusercontent.com/26827453/179757863-2c7353b5-a51a-4c14-ae63-5ecfe37dfe2f.png)
+![ssh](https://user-images.githubusercontent.com/26827453/179757866-8e21b825-b995-4d81-bfa1-82147ad0ea7c.png)
+![telnet](https://user-images.githubusercontent.com/26827453/179757869-d2dd4c5c-9fb5-4311-afca-6bd0900bfb86.png)
+![tr](https://user-images.githubusercontent.com/26827453/179757873-d45f6c59-872f-4568-b8b2-e05b36a1d893.png)
+
+
+
+![1](https://user-images.githubusercontent.com/26827453/179757788-541f5efe-7f4b-417a-bbdc-ebdaa260dc5a.png)
+![192 168 32 1_4G+ Broadband M2F297D_2022-06-11-Screenshot](https://user-images.githubusercontent.com/26827453/179757790-dd840354-c77e-4a02-b59a-90533075d8b7.png)
+![192 168 32 1_4G+ Broadband MF297D_2022-06-11-Screenshot](https://user-images.githubusercontent.com/26827453/179757793-36bde41f-e4ab-475e-9ae1-87b127c506eb.png)
+![192 168 32 1_4G+ Broadband MF297D_2022-11232106-11-Screenshot](https://user-images.githubusercontent.com/26827453/179757796-622a539a-38f8-46cf-a404-30dbe43ea49b.png)
+![12435](https://user-images.githubusercontent.com/26827453/179757798-1b3dad78-663c-43a6-bd13-4e338b25a6e5.png)
+![backup_file](https://user-images.githubusercontent.com/26827453/179757804-852439f4-3eb5-4563-bb34-73ff6cd72bc6.png)
+![easy](https://user-images.githubusercontent.com/26827453/179757805-105f722b-2ef0-47e9-9e87-33e3b844c9b4.png)
+![get](https://user-images.githubusercontent.com/26827453/179757806-5fb413d7-5d53-438f-b12c-01eb7b2567e8.png)
+![Screenshot_20220611_040858](https://user-images.githubusercontent.com/26827453/179757808-1ae5f2c5-6d4d-422d-b967-fcce848023c2.png)
+![Screenshot_20220611_060724](https://user-images.githubusercontent.com/26827453/179757810-fb978c29-5c0e-4b12-b5aa-b63b1d4b160e.png)
+![Screenshot_20220611_060750](https://user-images.githubusercontent.com/26827453/179757811-8c9e32db-2135-493b-bd36-15bd977f214d.png)
+![Screenshot_20220611_060816](https://user-images.githubusercontent.com/26827453/179757816-dc964ca1-f484-40f8-9db8-53b381ed59fa.png)
+![Screenshot_20220611_060843](https://user-images.githubusercontent.com/26827453/179757818-fd76889c-f76a-4c6c-a9a6-746dcdf74de0.png)
+![Screenshot_20220611_060951](https://user-images.githubusercontent.com/26827453/179757820-71cc2336-dbe6-43c4-ba6f-70bb78b97651.png)
+![Screenshot_20220611_061009](https://user-images.githubusercontent.com/26827453/179757823-fe6bd418-7174-4b40-ac78-21fb41c422fb.png)
+![Screenshot_20220611_061026](https://user-images.githubusercontent.com/26827453/179757826-6bb0c853-60f8-48e1-bba9-fc24553f2a48.png)
+![Screenshot_20220611_061305](https://user-images.githubusercontent.com/26827453/179757829-cbe33fb8-9f39-4517-be87-9087b24be06d.png)
+![Screenshot_20220611_062743](https://user-images.githubusercontent.com/26827453/179757831-74c2537a-d368-4360-be51-a937496fca3e.png)
+![Screenshot_20220611_063545](https://user-images.githubusercontent.com/26827453/179757833-7e564e60-56d9-4e08-8679-5d440881f3d9.png)
+![Screenshot_20220611_063908](https://user-images.githubusercontent.com/26827453/179757834-1bc429d3-6d6c-4992-b344-5cb99bc1b749.png)
+![Screenshot_20220611_064205](https://user-images.githubusercontent.com/26827453/179757836-ec7e4d71-c58e-4450-ba85-dd2e7a3f5645.png)
+![Screenshot_20220611_064331](https://user-images.githubusercontent.com/26827453/179757839-61d4bce5-3c77-40d3-bc89-c5a4eb29c88b.png)
+![Screenshot_20220611_064821](https://user-images.githubusercontent.com/26827453/179757842-7500118c-6589-45ef-8d8f-66c9658e2cd2.png)
+![Screenshot_20220611_073812](https://user-images.githubusercontent.com/26827453/179757843-34819555-c429-49c6-b284-005a754b8707.png)
+![Screenshot_20220611_075512](https://user-images.githubusercontent.com/26827453/179757845-9a5d8e04-0c5b-4d91-8b9f-36d0d2e216a5.png)
+![Screenshot_20220611_080138](https://user-images.githubusercontent.com/26827453/179757846-59b08319-61b3-4d3e-8325-0c1f77047bf6.png)
+![Screenshot_20220611_084042](https://user-images.githubusercontent.com/26827453/179757848-1c9ff63c-78a5-4f96-8c92-05f1ec40e31a.png)
+![Screenshot_20220611_103142](https://user-images.githubusercontent.com/26827453/179757850-39ee3d12-ee48-4734-9cc4-14c332834b78.png)
+![Screenshot_20220611_110751](https://user-images.githubusercontent.com/26827453/179757851-9e175c89-fe30-4b33-ab53-0889fac3b980.png)
+![Screenshot_20220611_113039](https://user-images.githubusercontent.com/26827453/179757853-5955531f-ea36-47ef-a439-6916cdce1391.png)
+![Screenshot_20220611_122045](https://user-images.githubusercontent.com/26827453/179757856-a51085c7-c383-4ccf-bd10-86e86dc6d1f8.png)
+![source](https://user-images.githubusercontent.com/26827453/179757859-32c3dd73-486b-48c8-b229-cd6654e9769b.png)
+
+
+
+
+
 [MF279_opensource_code.tar.gz](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9141262/MF279_opensource_code.tar.gz)
 
 ![Screen Shot 2022-06-20 at 22 50 35-fullpage](https://user-images.githubusercontent.com/26827453/179757438-bcdbd0cf-1856-4a4e-b86c-37f45d560cf0.png)
