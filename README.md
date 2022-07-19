@@ -103,6 +103,11 @@ Due to the use of weak random values, the security of the device is reduced, and
 
 https://www.cve.org/CVERecord?id=CVE-2022-23138
 
+
+
+
+
+
 ![#voip_advanced:saettings](https://user-images.githubusercontent.com/26827453/179758051-b6902d42-2f17-46c2-9c75-523bd3c25f31.png)
 ![#voip_settings](https://user-images.githubusercontent.com/26827453/179758057-3c4191d2-510d-419a-ad15-1f2022f9aacb.png)
 ![192 168 32 1_4G+ Broadband MF297D_2022-06-11_081924-Screenshot](https://user-images.githubusercontent.com/26827453/179758059-151a5fcf-a2e2-4b44-9860-708665c0dd58.png)
