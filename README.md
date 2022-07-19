@@ -103,8 +103,34 @@ Due to the use of weak random values, the security of the device is reduced, and
 
 https://www.cve.org/CVERecord?id=CVE-2022-23138
 
+![#voip_advanced:saettings](https://user-images.githubusercontent.com/26827453/179758051-b6902d42-2f17-46c2-9c75-523bd3c25f31.png)
+![#voip_settings](https://user-images.githubusercontent.com/26827453/179758057-3c4191d2-510d-419a-ad15-1f2022f9aacb.png)
+![192 168 32 1_4G+ Broadband MF297D_2022-06-11_081924-Screenshot](https://user-images.githubusercontent.com/26827453/179758059-151a5fcf-a2e2-4b44-9860-708665c0dd58.png)
+![192 168 32 1_4G+ Broadband MF297D_2022-06-11_083145-Screenshot](https://user-images.githubusercontent.com/26827453/179758060-d07678aa-464d-4a29-bd80-5a41268cd265.png)
+![antenna_SWITCH](https://user-images.githubusercontent.com/26827453/179758062-41f56062-cde4-40b3-a7aa-808e8bea350c.png)
+![bind_addr_autocomplete](https://user-images.githubusercontent.com/26827453/179758063-10a4e580-df5f-428b-83f2-1f2724ebde8f.png)
+![bind_addr](https://user-images.githubusercontent.com/26827453/179758065-dd4d324b-6ff9-408d-ae8f-9ab68751ba09.png)
+![configureation](https://user-images.githubusercontent.com/26827453/179758067-cd43f046-5dda-419a-bb9d-2c2e4cefa471.png)
+![device_setting](https://user-images.githubusercontent.com/26827453/179758069-7d0858f7-8c3a-46bc-8c74-60731fd92436.png)
+![deviceınfo](https://user-images.githubusercontent.com/26827453/179758071-a4f5d494-cf1f-450e-a0c9-7ec36b72e792.png)
+![diagnoses](https://user-images.githubusercontent.com/26827453/179758074-e22b2596-2130-4412-80fc-4e10af84c8a6.png)
+![dmz](https://user-images.githubusercontent.com/26827453/179758078-c5b616c6-fa39-409b-9f24-de0e1d8f6c03.png)
+![external](https://user-images.githubusercontent.com/26827453/179758080-e282b088-0fdb-4622-b33f-1438342cf9e5.png)
+![firewall](https://user-images.githubusercontent.com/26827453/179758083-f147ef15-1007-4125-9ac9-c1825b66040a.png)
+![home](https://user-images.githubusercontent.com/26827453/179758086-1fab4b5a-c2fc-4291-abfe-6e70fa857847.png)
+![mac_filter](https://user-images.githubusercontent.com/26827453/179758087-b50f9eb7-8dc2-4fbf-acc5-4d22d1539bcd.png)
+![main](https://user-images.githubusercontent.com/26827453/179758088-e61fec1b-307f-4ab3-9f42-5afde502fd26.png)
+![mesh_add_sub_node](https://user-images.githubusercontent.com/26827453/179758090-3daf8b26-4ff4-4b34-8e1e-f66774225ef5.png)
+![mesh_device_list](https://user-images.githubusercontent.com/26827453/179758092-1d4dc7e4-dc5d-4b95-a83b-b2d6b9ede6e9.png)
+![mesh_faq](https://user-images.githubusercontent.com/26827453/179758094-0605c3b0-1a74-4819-963e-4369ef3bbe85.png)
+![mesh_guest](https://user-images.githubusercontent.com/26827453/179758098-773d4e85-ee1b-4c4b-bdcd-5ebafabf3a8f.png)
+![mesh_network_setting](https://user-images.githubusercontent.com/26827453/179758100-b0b4641f-9f70-4fd1-8e02-c93c26e0d36d.png)
+![mesh_switch_wifi_setting](https://user-images.githubusercontent.com/26827453/179758103-41d56b94-d285-48eb-b418-73761da4480c.png)
+![mesh_wps](https://user-images.githubusercontent.com/26827453/179758105-d2d4292f-381f-46e5-8ceb-aeb9e7e2a9b3.png)
+![mesh](https://user-images.githubusercontent.com/26827453/179758106-72e81b6f-53b4-47eb-9b6a-b2919bd6870a.png)
+![network_info](https://user-images.githubusercontent.com/26827453/179758107-064d9844-1645-44e0-b387-1edd1a7d11df.png)
 
-
+[MF279_opensource_code.tar.gz](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9141280/MF279_opensource_code.tar.gz)
 
 
 
@@ -113,7 +139,6 @@ https://www.cve.org/CVERecord?id=CVE-2022-23138
 ![ssh](https://user-images.githubusercontent.com/26827453/179757866-8e21b825-b995-4d81-bfa1-82147ad0ea7c.png)
 ![telnet](https://user-images.githubusercontent.com/26827453/179757869-d2dd4c5c-9fb5-4311-afca-6bd0900bfb86.png)
 ![tr](https://user-images.githubusercontent.com/26827453/179757873-d45f6c59-872f-4568-b8b2-e05b36a1d893.png)
-
 
 
 ![1](https://user-images.githubusercontent.com/26827453/179757788-541f5efe-7f4b-417a-bbdc-ebdaa260dc5a.png)
