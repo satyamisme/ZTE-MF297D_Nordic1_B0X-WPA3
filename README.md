@@ -130,6 +130,50 @@ curl 'http://192.168.32.1/goform/goform_set_cmd_process' -X POST \
   --data-raw 'isTest=false&goformId=setTR069Config&serverURL=wusemanwasherehttps%3A%2F%2Frgw.teliacompany.com%3A7575%2FACS-server%2FACS&serverusername=&serveruserpassword=&tr069_CPEPortNo=7547&connrequestname=&connrequestpassword=&tr069_PeriodicInformEnable=0&tr069_PeriodicInformInterval=99500&tr069_CertEnable=1&AD=<token>'
 ```
 
+### Print Access Control ACL Mode (Default: 2)
+
+```bash
+curl 'http://192.168.32.1/goform/goform_get_cmd_process?cmd=queryDeviceAccessControlList' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: zwsd="9db95bed7fecf8c4305252a4f6e12411"' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure
+```
+
+### Print Stuff for AD Token 
+
+```bash
+curl 'http://192.168.32.1/goform/goform_get_cmd_process?cmd=IOT_product_type%2Cloginfo%2Cmanufacturer%2Cmodel_name%2Cproduct_type%2Cwa_inner_version%2Cweb_api_version%2Cwifi_nv_api_version&multi_data=1' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: zwsd="9db95bed7fecf8c4305252a4f6e12411"' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure
+```
+```
+{
+  "IOT_product_type": "",
+  "loginfo": "ok",
+  "manufacturer": "",
+  "model_name": "MF297D",
+  "product_type": "CPE",
+  "wa_inner_version": "BD_TELIASEMF297DMODV1.0.0B03 [Jan  5 2022 18:02:19]",
+  "web_api_version": "",
+  "wifi_nv_api_version": "2"
+}
+```
+
+
+
 ### Get Telnet info: 
 
 ![telnet](https://user-images.githubusercontent.com/26827453/173183876-fe01e47d-7973-48bd-aeb1-fde07da2207d.png)
@@ -263,7 +307,25 @@ http://192.168.32.1/index.html#ulca_setting
 ```
 
 
+### Awesome resources
 
+* ![4G-Hotspots-For-Fun-Bugs-Net-Financial-Loss.pdf](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9388063/4G-Hotspots-For-Fun-Bugs-Net-Financial-Loss.pdf)
+
+
+* ![ZTE_Vulnerability.pdf](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9388064/ZTE_Vulnerability.pdf)
+
+# json files
+
+[menu.txt](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9388066/menu.txt)
+
+[menu4g.js.txt](https://github.com/wuseman/ZTE-MF297D_Nordic1_B0X-WPA3/files/9388065/menu4g.js.txt)
+
+
+
+# SORT BELOW
+
+# ZTE PASS
+![zte_pass](https://user-images.githubusercontent.com/26827453/185767755-334ede86-4a52-4ee0-b9ef-b4249d4e86d5.png)
 
 
 # TO BE SORTED
