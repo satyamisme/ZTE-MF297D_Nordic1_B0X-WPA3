@@ -1,0 +1,100 @@
+cmd=IOT_product_type%2Cloginfo%2Cmanufacturer%2Cmodel_name%2Cproduct_type%2Cwa_inner_version%2Cweb_api_version%2Cwifi_nv_api_version&multi_data=1 HTTP/1.1 
+
+
+
+cmd=check_web_conflict&multi_data=1 HTTP/1.1 
+
+cmd=DDNS_function_enable%2CLTE_CA_type%2CNAT_setting_function_enable%2Calg_sip_enable%2Cbattery_charging%2Cbattery_exist%2Cbattery_value%2Cbattery_vol_percent%2CcableMode%2Ccurrent_upgrade_state%2Cdata_switch_state%2Cdata_volume_alert_percent%2Cdata_volume_limit_size%2Cdata_volume_limit_switch%2Cdata_volume_limit_unit%2Cdhcp_wan_status%2Cdial_ipv6_wan_ipaddr%2Cdial_wan_ipaddr%2Cdm_update_package_file_exist%2Cdm_update_successful_time%2Cflux_data_volume_alert_percent%2Cflux_data_volume_limit_size%2Cflux_data_volume_limit_switch%2Cflux_data_volume_limit_unit%2Cflux_monthly_rx_bytes%2Cflux_monthly_time%2Cflux_monthly_tx_bytes%2Cflux_realtime_rx_thrpt%2Cflux_realtime_tx_thrpt%2Chybrid_mode_enable%2Cif_has_select%2Cipv6_wan_ipaddr%2Clinkdown_speed%2Clinkup_speed%2Cloginfo%2Cmaster_device_information%2Cmc_modem_main_state%2Cmesh_role%2Cmodem_main_state%2Cmonthly_rx_bytes%2Cmonthly_time%2Cmonthly_tx_bytes%2Cmwan_wanlan1_link_mode%2Cmwan_wanlan1_link_state%2Cmwan_wanlan1_linkdown_speed%2Cmwan_wanlan1_linkup_speed%2Cmwan_wanlan2_link_mode%2Cmwan_wanlan2_link_state%2Cmwan_wanlan2_linkdown_speed%2Cmwan_wanlan2_linkup_speed%2Cnetwork_provider%2Cnetwork_signalbar%2Cnetwork_type%2Cnew_version_state%2Copms_wan_auto_mode%2Copms_wan_mode%2Cppp_status%2Cpppoe_status%2Crealtime_rx_thrpt%2Crealtime_tx_thrpt%2Cselect_op%2Csignalbar%2Csignalbar_5g%2Csim_spn_b1_flag%2Csim_spn_b2_flag%2Csim_spn_name_data%2Csimcard_roam%2Cslaver_device_information_1%2Cslaver_device_information_2%2Cslaver_device_information_3%2Csms_received_flag%2Csms_unread_num%2Cspn_b1_flag%2Cspn_b2_flag%2Cspn_name_data%2Cstatic_wan_status%2Ctr069_user_improv_flag%2Ctr069_user_improv_notify_flag%2Ctr069_zte_link_flag%2Cupgrade_result%2Cwan_ipaddr%2Cwan_lte_ca%2Cwan_networking_status%2Cweb_wifi_nfc_flag%2Cweb_wifi_nfc_switch%2Cwifi_2g_acs_time%2Cwifi_attr_chip2_support_ssid_num%2Cwifi_attr_support_ap_scan%2Cwifi_attr_support_speed_control%2Cwifi_lbd_enable%2Cwifi_nv_api_version%2Cwifi_start_mode%2Cwifi_syncparas_flag&multi_data=1&sms_received_flag_flag=0&sts_received_flag_flag=0 HTTP/1.1 
+
+cmd=hostNameList HTTP/1.1 
+
+cmd=is_led_night_mode%2Cis_night_mode%2Cmesh_deploying_status%2Cmwan_wanlan1_ipv6_wan_ipaddr%2Cmwan_wanlan1_wan_ipaddr%2Cmwan_wanlan2_ipv6_wan_ipaddr%2Cmwan_wanlan2_wan_ipaddr%2Cport_status%2Cprivacy_read_flag%2Cwifi_attr_support_wifi_moving%2Cwifi_mesh_deployed%2Czte_sales_register_enable&multi_data=1&sms_received_flag_flag=0&sts_received_flag_flag=0 HTTP/1.1 
+
+cmd=total_tx_bytes%2Ctotal_rx_bytes%2Ctotal_time%2Cflux_total_tx_bytes%2C+flux_total_rx_bytes%2C+flux_total_time%2Cmonthly_tx_bytes%2Cmonthly_rx_bytes%2Cmonthly_time%2C%2Cflux_monthly_tx_bytes%2Cflux_monthly_rx_bytes%2Cmonthly_time%2C%2Crealtime_tx_bytes%2Crealtime_rx_bytes%2Crealtime_time%2C%2Cflux_realtime_tx_bytes%2Cflux_realtime_rx_bytes%2Cflux_realtime_time%2C%2Crealtime_tx_thrpt%2Crealtime_rx_thrpt%2Ctraffic_clear_date%2C+flux_clear_date%2Cflux_realtime_rx_thrpt%2Cflux_realtime_tx_thrpt%2Cwan_auto_clear_flow_data_switch%2Cflux_auto_clear_flow_data_switch&multi_data=1 HTTP/1.1 
+
+cmd=daily_flow_information_within31_list_get&data_per_page=31&order_by=desc&page=0 HTTP/1.1 
+
+cmd=web_api_version HTTP/1.1 
+
+cmd=web_wifi_password_init_flag&multi_data=1 HTTP/1.1 
+
+cmd=login_lock_time%2Cloginfo%2Cpsw_fail_num_str&multi_data=1 HTTP/1.1 
+
+cmd=station_list HTTP/1.1 
+
+cmd=queryStationAccessedTimeSpan HTTP/1.1 
+
+cmd=offline_list HTTP/1.1 
+
+cmd=queryAccessPointInfo HTTP/1.1 
+
+cmd=LED_STATE&multi_data=1 HTTP/1.1 
+
+cmd=BSSID%2Capn_attr_default_apn_size%2Capn_attr_max_apn_size%2Capn_profile_name_max_length%2Ccalibration_data_unit%2Ccalibration_time_unit%2Ccr_version%2Cflux_clear_date_support%2Cfsn_no_get%2Chardware_version%2Cimei%2Cmac_address%2Cmc_attr_battery_status%2Cmsisdn%2Cpppd_attr_ipv6_support%2Csim_imsi%2Csim_msisdn%2Ctraffic_clear_date_support%2Cussd_enable%2Cwa_inner_version%2Cwa_version%2Cwifi_attr_max_station_number%2Cwifi_attr_support_band_steer%2Cwifi_attr_support_manual_switch%2Cwifi_attr_support_multi_ssid%2Cwifi_attr_support_qr_code%2Cwifi_mac_address&multi_data=1 HTTP/1.1 
+
+cmd=queryDeviceAccessControlList HTTP/1.1 
+
+cmd=queryWiFiChipAdvancedInfo HTTP/1.1 
+
+cmd=ap_station_mode%2Cwifi_sta_connection&multi_data=1 HTTP/1.1 
+
+cmd=LD&multi_data=1 HTTP/1.1 
+
+cmd=RD%2Ccr_version%2Cwa_inner_version%2Cweb_token_encode_type&multi_data=1 HTTP/1.1 
+
+cmd=lan_station_list HTTP/1.1 
+
+cmd=child_mac_rule_info&mac_addr=D6%3A0E%3A53%3A7E%3A60%3A53 HTTP/1.1 
+
+cmd=pbm_data_total&data_per_page=1000&isAsc=true&mem_store=2&orderBy=name&page=0 HTTP/1.1 
+
+cmd=sms_attr_number_encode_type_flag HTTP/1.1 
+
+cmd=sms_capacity_info HTTP/1.1 
+
+cmd=sms_data_total&data_per_page=500&mem_store=2&order_by=order+by+id+desc&page=0&tags=10 HTTP/1.1 
+
+cmd=queryWiFiModuleCapacity HTTP/1.1 
+
+cmd=queryWiFiChipCapacity HTTP/1.1 
+
+cmd=bt_attr_support%2Cflux_clear_date_support%2Cfm_attr_support%2Ctraffic_clear_date_support%2Cwan_attr_opms_support_auto&multi_data=1 HTTP/1.1 
+
+cmd=sms_data_total&data_per_page=20&mem_store=2&order_by=order+by+id+desc&page=0&tags=10 HTTP/1.1 
+
+cmd=queryWiFiCoverage HTTP/1.1 
+
+cmd=openEnable%2CcloseEnable%2CopenTime%2CcloseTime&multi_data=1 HTTP/1.1 
+
+cmd=sysIdleTimeToSleep HTTP/1.1 
+
+cmd=web_guest_ssid_active_left_time%2Cwifi_chip1_guest_access_time%2Cwifi_guest_ssid_active_time&multi_data=1 HTTP/1.1 
+
+cmd=web_sleep_switch%2Cweb_sleep_time%2Cweb_sleep_time_0%2Cweb_sleep_time_1%2Cweb_sleep_time_2%2Cweb_sleep_time_3%2Cweb_sleep_time_4%2Cweb_sleep_time_5%2Cweb_sleep_time_6%2Cweb_wake_switch%2Cweb_wake_time%2Cweb_wake_time_0%2Cweb_wake_time_1%2Cweb_wake_time_2%2Cweb_wake_time_3%2Cweb_wake_time_4%2Cweb_wake_time_5%2Cweb_wake_time_6%2Cwifi_sleep_week&multi_data=1 HTTP/1.1 
+
+cmd=queryWiFiGuestLeftTime HTTP/1.1 
+
+cmd=night_mode_switch%2Cnight_mode_start_time%2Cnight_mode_end_time%2Cnight_mode_close_all_led&multi_data=1 HTTP/1.1 
+
+cmd=systime_mode HTTP/1.1 
+
+cmd=nitz_sync_flag HTTP/1.1 
+
+cmd=sntp_time_set_mode HTTP/1.1 
+
+cmd=sntp_syn_done%2Csyn_done&multi_data=1 HTTP/1.1 
+
+cmd=pppd_attr_ipv6_support%2Capn_attr_default_apn_size%2Capn_attr_max_apn_size%2Capn_profile_name_max_length%2Capn_attr_forbidden_auto_apn&multi_data=1 HTTP/1.1 
+
+cmd=APN_config0%2CAPN_config1%2CAPN_config2%2CAPN_config3%2CAPN_config4%2CAPN_config5%2CAPN_config6%2CAPN_config7%2CAPN_config8%2CAPN_config9%2Cipv6_APN_config0%2Cipv6_APN_config1%2Cipv6_APN_config2%2Cipv6_APN_config3%2Cipv6_APN_config4%2Cipv6_APN_config5%2Cipv6_APN_config6%2Cipv6_APN_config7%2Cipv6_APN_config8%2Cipv6_APN_config9%2CAPN_config10%2CAPN_config11%2CAPN_config12%2CAPN_config13%2CAPN_config14%2CAPN_config15%2CAPN_config16%2CAPN_config17%2CAPN_config18%2CAPN_config19%2Cipv6_APN_config10%2Cipv6_APN_config11%2Cipv6_APN_config12%2Cipv6_APN_config13%2Cipv6_APN_config14%2Cipv6_APN_config15%2Cipv6_APN_config16%2Cipv6_APN_config17%2Cipv6_APN_config18%2Cipv6_APN_config19%2Capn_mode%2Cm_profile_name%2Cwan_apn%2Cpdp_type%2CCurrent_index%2C+ipv6_wan_apn%2Cipv6_pdp_type%2Capn_auto_config%2Cipv6_apn_auto_config%2Cmodem_main_state&multi_data=1 HTTP/1.1 
+
+cmd=childGroupList HTTP/1.1 
+
+cmd=wifi_speed_control_enable%2Cwifi_speed_high_mac_list%2Cwifi_speed_low_mac_list&multi_data=1 HTTP/1.1 
+
+cmd=dial_mode%2Cdial_roam_setting_option%2Croam_setting_option&multi_data=1 HTTP/1.1 
+
+cmd=dhcp_wan_status%2Cmwan_wanlan1_dhcp_status%2Cmwan_wanlan1_pppoe_dial_mode%2Cmwan_wanlan1_pppoe_password%2Cmwan_wanlan1_pppoe_status%2Cmwan_wanlan1_pppoe_username%2Cmwan_wanlan2_dhcp_status%2Cmwan_wanlan2_pppoe_dial_mode%2Cmwan_wanlan2_pppoe_password%2Cmwan_wanlan2_pppoe_status%2Cmwan_wanlan2_pppoe_username%2Copms_wan_auto_mode%2Copms_wan_mode%2Cppp_status%2Cpppoe_dial_mode%2Cpppoe_password%2Cpppoe_username%2Cstatic_wan_gateway%2Cstatic_wan_ipaddr%2Cstatic_wan_netmask%2Cstatic_wan_primary_dns%2Cstatic_wan_secondary_dns%2Cstatic_wan_status&multi_data=1 HTTP/1.1 
+
+cmd=device_country_code HTTP/1.1 
+
