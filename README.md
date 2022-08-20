@@ -21,6 +21,39 @@ they forgot to disable access to tr69 it seems so turn off auto upgrade ASAP!
 
 ### Login on router, no other methods works and the ones around the web is old, do as below for login:
 
+##### Simple Login via Password
+
+```bash
+curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
+      -H 'Accept: application/json, text/javascript, */*; q=0.01'   \
+      -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+      -H 'Connection: keep-alive'     \
+      -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8'    \
+      -H 'Origin: http://192.168.32.1'   \
+      -H 'Referer: http://192.168.32.1/'    \
+      -H 'Cookie: zwsd="8bb88f80d334b1869781beb89f7b73be' \
+      -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'   \
+      -H 'X-Requested-With: XMLHttpRequest'    \
+      --data-raw 'isTest=false&goformId=LOGIN&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
+```
+
+### Set WebLanguage via Password instead of WebToken
+
+```bash
+curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
+      -H 'Accept: application/json, text/javascript, */*; q=0.01'   \
+      -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+      -H 'Connection: keep-alive'     \
+      -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8'    \
+      -H 'Origin: http://192.168.32.1'   \
+      -H 'Referer: http://192.168.32.1/'    \
+      -H 'Cookie: zwsd="8bb88f80d334b1869781beb89f7b73be' \
+      -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'   \
+      -H 'X-Requested-With: XMLHttpRequest'    \
+      --data-raw 'isTest=false&goformId=SET_WEB_LANGUAGE&Language=sv&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
+```
+
+
 ### Generate LD Token
 
 ```sh
