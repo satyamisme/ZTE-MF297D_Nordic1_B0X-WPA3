@@ -36,6 +36,7 @@ curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
       -H 'X-Requested-With: XMLHttpRequest'    \
       --data-raw 'isTest=false&goformId=LOGIN&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
 ```
+![jq](https://user-images.githubusercontent.com/26827453/185767315-e7bcd852-f4d1-49ec-94b4-9af773403b68.png)
 
 ### Set WebLanguage via Password instead of WebToken
 
