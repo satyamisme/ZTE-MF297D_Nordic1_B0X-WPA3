@@ -36,9 +36,7 @@ admin_Password=$(curl -sL 'http://192.168.32.1/goform/goform_get_cmd_process?isT
   --insecure|jq)
   
    echo $admin_Password|cut -d'"' -f4
-
 ```
-
 
 ##### Simple Loginvia Password
 
@@ -76,9 +74,26 @@ curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
       --data-raw 'isTest=false&goformId=SET_WEB_LANGUAGE&Language=sv&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
 ```
 
-### Generate LD Token
+##### Generate RD Token
 
-```sh
+```bash
+RD=$(curl 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=RD&_=1660960608154' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: zwsd="8bb88f80d334b1869781beb89f7b73be"' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure|cut -d'"' -f4)
+
+echo ${RD}
+```
+
+##### Generate LD Token
+
+```bash
 LD="$(curl 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=LD&_=1655363462531' \
   -H 'Accept: application/json, text/javascript, */*; q=0.01' \
   -H 'Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7' \
@@ -88,6 +103,8 @@ LD="$(curl 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=L
   -H 'X-Requested-With: XMLHttpRequest' \
   --compressed \
   --insecure|cut -d'"' -f4)"
+  
+echo ${LD}
 ```
 
 ### Disable TR-069 via commandline
