@@ -19,6 +19,14 @@ My current firmware version is: `MF297D_Nordic1_B05` - All Telia routers will be
 Alright, first we want is to DISABLE the autoupgrade so we will not upgrade from `MF297D_Nordic1_B05` -> `MF297D_Nordic1_B06`, 
 they forgot to disable access to tr69 it seems so turn off auto upgrade ASAP! 
 
+
+###### WebToken
+
+We need to add an additional requirement more when we decide to communicate with the “/goform/goform_set_cmd_process” endpoint (Figure 24).
+There is a function called at `AD_hash_check_and_allowedlist`
+
+Depending on how strong the randomness of the `RD` value is, we could try to brute-force it, but we won’t focus on that here. Using pre-auth `XSS`, we can obtain RD value sending the request in Figure 27 and calculate the `AD` value. This function will return true also when the “goformId” value is one of the entries in the `g_set_commands_v`” array. If we choose one of these `ID`s, we don't need to care about the `AD` parameter in our request. After examining all related handlers for the above form `ID`s, something interesting stood out.
+
 ### Login on router, no other methods works and the ones around the web is old, do as below for login:
 
 ##### Get Password for using instead of AD WebToken for Curl :)
@@ -38,7 +46,7 @@ admin_Password=$(curl -sL 'http://192.168.32.1/goform/goform_get_cmd_process?isT
    echo $admin_Password|cut -d'"' -f4
 ```
 
-##### Simple Loginvia Password
+##### Simple Login Via Password
 
 ![admin_password](https://user-images.githubusercontent.com/26827453/185767478-f6b3bc48-cdc5-4178-b306-c7d458b6cb79.png)
 
@@ -257,6 +265,48 @@ http://192.168.32.1/index.html#ulca_setting
 
 
 
+
+# TO BE SORTED
+![Screen Shot 2022-06-20 at 22 50 35-fullpage](https://user-images.githubusercontent.com/26827453/185767707-50434de7-4168-48a1-81a1-76b5e1328b55.png)
+![Screen Shot 2022-06-20 at 22 50 49-fullpage](https://user-images.githubusercontent.com/26827453/185767708-34daf06c-7228-449e-bc3a-02c478f07b4b.png)
+![Screen Shot 2022-06-20 at 22 50 57-fullpage](https://user-images.githubusercontent.com/26827453/185767709-f8ea1248-7ffa-46cb-8806-1a5e9fc127e7.png)
+![Screen Shot 2022-06-20 at 22 51 08-fullpage](https://user-images.githubusercontent.com/26827453/185767710-672fcb7d-0f81-457b-96c4-3094a1bb664d.png)
+![Screen Shot 2022-06-20 at 22 51 11-fullpage](https://user-images.githubusercontent.com/26827453/185767711-04d710a9-e436-4726-aa1b-0ad066b51cf3.png)
+![Screen Shot 2022-06-20 at 22 51 14-fullpage](https://user-images.githubusercontent.com/26827453/185767712-410c8c1a-33a0-4852-a7a3-775eb4a2b467.png)
+![Screen Shot 2022-06-20 at 22 51 17-fullpage](https://user-images.githubusercontent.com/26827453/185767713-a6c07d7b-1b31-4dc8-9f2a-25c1c3845b40.png)
+![Screen Shot 2022-06-20 at 22 51 26-fullpage](https://user-images.githubusercontent.com/26827453/185767714-1f109898-9d4d-4548-9a62-588f41ef56ff.png)
+![Screen Shot 2022-06-20 at 22 51 28-fullpage](https://user-images.githubusercontent.com/26827453/185767715-4647dc59-a141-448b-bf7f-19480172d58e.png)
+![Screen Shot 2022-06-20 at 22 51 33-fullpage](https://user-images.githubusercontent.com/26827453/185767716-65cc68e5-fec0-4809-a902-c5434be52346.png)
+![Screen Shot 2022-06-20 at 22 51 46-fullpage](https://user-images.githubusercontent.com/26827453/185767717-baf6330a-718d-4652-a2ce-838bde86f13d.png)
+![Screen Shot 2022-06-20 at 22 51 54-fullpage](https://user-images.githubusercontent.com/26827453/185767718-dd3fec83-2ade-4c1b-b814-faddb3fb86b3.png)
+![Screen Shot 2022-06-20 at 22 52 16-fullpage](https://user-images.githubusercontent.com/26827453/185767719-6c3ab0d4-d594-486b-a960-7adac287abc4.png)
+![Screen Shot 2022-06-20 at 22 52 22-fullpage](https://user-images.githubusercontent.com/26827453/185767721-280c5f24-27c0-421b-a4ce-a3d74d6dc537.png)
+![Screen Shot 2022-06-20 at 22 53 03-fullpage](https://user-images.githubusercontent.com/26827453/185767722-61ec36ef-db09-407c-8f18-5aeed1c7741d.png)
+![Screen Shot 2022-06-20 at 22 53 27-fullpage](https://user-images.githubusercontent.com/26827453/185767723-11c23680-5f77-4d85-8be5-741fa1a2883b.png)
+![Screen Shot 2022-06-20 at 22 53 32-fullpage](https://user-images.githubusercontent.com/26827453/185767724-e46a78e9-e809-41c8-8e34-1391bc40b12c.png)
+![Screen Shot 2022-06-20 at 22 53 37-fullpage](https://user-images.githubusercontent.com/26827453/185767725-a4b9ecf4-663f-48c4-a1ca-c2ccc3bb32de.png)
+![Screen Shot 2022-06-20 at 22 54 51-fullpage](https://user-images.githubusercontent.com/26827453/185767727-36599d36-28a3-471d-802f-9c42cc5ddb04.png)
+![screencapture-192-168-1-100-gateway-lp-2022-06-17-14_00_06](https://user-images.githubusercontent.com/26827453/185767728-bc80cfe0-9690-489e-b5ad-b26e8bad05ba.png)
+![screencapture-192-168-1-100-gateway-lp-2022-06-17-14_00_12](https://user-images.githubusercontent.com/26827453/185767729-bec54071-3c08-4094-b9d8-0af85d6f952b.png)
+![screencapture-192-168-32-1-index-html-2022-06-15-22_22_51](https://user-images.githubusercontent.com/26827453/185767730-0d4f83c3-1223-434a-a7ff-3b4c71d2c83a.png)
+![screencapture-192-168-32-1-index-html-2022-06-15-22_22_59](https://user-images.githubusercontent.com/26827453/185767731-d8e9b6bd-2ee3-4ac1-8f8e-0324ac64c531.png)
+![screencapture-192-168-32-1-index-html-2022-06-15-22_23_30](https://user-images.githubusercontent.com/26827453/185767732-37f93378-5c0d-48e2-82eb-10bd310c0cc7.png)
+![screencapture-192-168-32-1-index-html-2022-06-15-22_24_08](https://user-images.githubusercontent.com/26827453/185767733-184b76b7-2952-4121-9c82-aa38755197f3.png)
+![screencapture-192-168-32-1-index-html-2022-06-15-22_24_11](https://user-images.githubusercontent.com/26827453/185767735-52388820-1415-485b-ad9a-cbd7991c5fb3.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-02_29_25](https://user-images.githubusercontent.com/26827453/185767736-d44e5a39-df90-4b57-8fed-2dfc70abdc01.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-07_13_48](https://user-images.githubusercontent.com/26827453/185767737-26bccc25-8c26-476b-abde-60d4f1c927a4.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-07_15_49](https://user-images.githubusercontent.com/26827453/185767738-f85729eb-700c-412f-819c-062ee5a9c620.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-07_19_17](https://user-images.githubusercontent.com/26827453/185767739-a36ef14b-bf42-4482-a502-db090a0f6b61.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-07_35_43](https://user-images.githubusercontent.com/26827453/185767740-0e42b1fe-6a0a-4d25-826c-9255c01f6da4.png)
+![screencapture-192-168-32-1-index-html-2022-06-16-08_02_25](https://user-images.githubusercontent.com/26827453/185767741-e688a885-5725-49d8-89b6-4d44d6cefc8a.png)
+![screencapture-192-168-32-1-m-index-html-2022-06-16-02_59_19](https://user-images.githubusercontent.com/26827453/185767742-55fa7402-6f28-45f0-96eb-39c977578b91.png)
+![screencapture-192-168-32-1-m-index-html-2022-06-16-07_37_40](https://user-images.githubusercontent.com/26827453/185767743-56ee40dc-2d02-420a-b03d-a823cc15c8ff.png)
+![Screenshot_20220620_225407](https://user-images.githubusercontent.com/26827453/185767744-b53dcbe1-c6e8-4a48-9e05-8428f5054a0e.png)
+![Screenshot_20220817_182948](https://user-images.githubusercontent.com/26827453/185767745-ab2973ab-7953-4ce7-bde3-498befd238df.png)
+![Screenshot_20220817_183037](https://user-images.githubusercontent.com/26827453/185767746-3c8d22bf-b7ee-41f7-acf3-ab5436fdc44a.png)
+![Screenshot_20220817_183319](https://user-images.githubusercontent.com/26827453/185767747-f3cc4779-17e4-4051-afa2-650285672322.png)
+![Screenshot_20220820_043200](https://user-images.githubusercontent.com/26827453/185767748-0bdcadbc-3809-4ce3-8237-46829962c5b2.png)
+ 
 
 ![#voip_advanced:saettings](https://user-images.githubusercontent.com/26827453/179758051-b6902d42-2f17-46c2-9c75-523bd3c25f31.png)
 ![#voip_settings](https://user-images.githubusercontent.com/26827453/179758057-3c4191d2-510d-419a-ad15-1f2022f9aacb.png)
