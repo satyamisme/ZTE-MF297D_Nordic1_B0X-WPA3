@@ -21,7 +21,28 @@ they forgot to disable access to tr69 it seems so turn off auto upgrade ASAP!
 
 ### Login on router, no other methods works and the ones around the web is old, do as below for login:
 
-##### Simple Login via Password
+##### Get Password for using instead of AD WebToken for Curl :)
+
+```bash
+admin_Password=$(curl -sL 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=admin_Password' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: zwsd="9db95bed7fecf8c4305252a4f6e12411"' \
+  -H 'Referer: http://192.168.32.1/' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure|jq)
+  
+   echo $admin_Password|cut -d'"' -f4
+
+```
+
+
+##### Simple Loginvia Password
+
+![admin_password](https://user-images.githubusercontent.com/26827453/185767478-f6b3bc48-cdc5-4178-b306-c7d458b6cb79.png)
 
 ```bash
 curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
@@ -36,9 +57,10 @@ curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
       -H 'X-Requested-With: XMLHttpRequest'    \
       --data-raw 'isTest=false&goformId=LOGIN&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
 ```
-![jq](https://user-images.githubusercontent.com/26827453/185767315-e7bcd852-f4d1-49ec-94b4-9af773403b68.png)
 
 ### Set WebLanguage via Password instead of WebToken
+
+![success](https://user-images.githubusercontent.com/26827453/185767477-2160419c-62fa-41f2-bb43-653b5c4b1dae.png)
 
 ```bash
 curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
@@ -54,7 +76,6 @@ curl -sL 'http://192.168.32.1/goform/goform_set_cmd_process'   \
       --data-raw 'isTest=false&goformId=SET_WEB_LANGUAGE&Language=sv&password=506F30DEDC18694E4F2A347033BD5FC1D07389C7CB7970BA804FC4EB3DF604E8'|jq
 ```
 
-
 ### Generate LD Token
 
 ```sh
@@ -69,32 +90,11 @@ LD="$(curl 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=L
   --insecure|cut -d'"' -f4)"
 ```
 
-### Login
-
-{"result":"1"} = `success`
-
-{"result":"3"} = `invalid`
-
-```sh
-  curl 'http://192.168.32.1/goform/goform_set_cmd_process' \
-  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
-  -H 'Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'Connection: keep-alive' \
-  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
-  -H 'Origin: http://192.168.32.1' \
-  -H 'Referer: http://192.168.32.1/' \
-  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36' \
-  -H 'X-Requested-With: XMLHttpRequest' \
-  --data-raw "isTest=false&goformId=LOGIN&password=$(LD)" \
-  --compressed \
-  --insecure
-```
-
-### Disable tr69
+### Disable TR-069 via commandline
 
 To avoid to upgrade to the newer version, turn off tr069 or edit the ACSURL (wich is hidden and disabled for us but they forgot to disable it)
 
-```console
+```bash
 curl 'http://192.168.32.1/goform/goform_set_cmd_process' -X POST \ 
   -H 'Accept: application/json, text/javascript, */*; q=0.01' \
   -H 'Accept-Language: en-US,en;q=0.5' \
@@ -103,19 +103,6 @@ curl 'http://192.168.32.1/goform/goform_set_cmd_process' -X POST \
   -H 'X-Requested-With: XMLHttpRequest' \
   -H 'Cookie: zwsd="<zwsd:_cookie>"' \
   --data-raw 'isTest=false&goformId=setTR069Config&serverURL=wusemanwasherehttps%3A%2F%2Frgw.teliacompany.com%3A7575%2FACS-server%2FACS&serverusername=&serveruserpassword=&tr069_CPEPortNo=7547&connrequestname=&connrequestpassword=&tr069_PeriodicInformEnable=0&tr069_PeriodicInformInterval=99500&tr069_CertEnable=1&AD=<token>'
-```
-
-### Router Login:
-
-```
-curl 'http://192.168.32.1/goform/goform_set_cmd_process'  \
-    -X POST -H 'TeliaHacking/1.0' \
-    -H 'Accept: application/json, text/javascript, */*; q=0.01' \
-    -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' \
-    -H 'Referer: http://192.168.32.1/' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
-    -H 'X-Requested-With: XMLHttpRequest' \
-    -H 'Origin: http://192.168.32.1' \
-    -H 'Connection: keep-alive' --data-raw 'isTest=false&goformId=LOGIN&password=<ztoken>'
 ```
 
 ### Get Telnet info: 
