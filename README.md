@@ -30,9 +30,7 @@ Depending on how strong the randomness of the `RD` value is, we could try to bru
 
 
 ### Developer Console (Temp Not Real Commands For TOKEN)
-
-![ad](https://user-images.githubusercontent.com/26827453/185768282-bcf6521c-617c-43f7-af4f-ffc68fef41ea.png)
-
+![Screenshot_20220821_003552](https://user-images.githubusercontent.com/26827453/185768301-014e55c1-cb8c-4368-bad6-bcef9243451c.png)
 
 * Example usage, to be updated
 
