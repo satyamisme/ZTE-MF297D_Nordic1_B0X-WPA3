@@ -65,7 +65,7 @@ b64_md5('AD_test')
 admin_Password=$(curl -sL 'http://192.168.32.1/goform/goform_get_cmd_process?isTest=false&cmd=admin_Password' \
   -H 'Accept: application/json, text/javascript, */*; q=0.01' \
   -H 'Accept-Language: en-US,en;q=0.9,sv;q=0.8' \
-  -H 'Connectvar AD=SHA256('AD')ion: keep-alive' \
+  -H 'Connection: keep-alive' \
   -H 'Cookie: zwsd="9db95bed7fecf8c4305252a4f6e12411"' \
   -H 'Referer: http://192.168.32.1/' \
   -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
