@@ -234,6 +234,7 @@ cat menu4g.js \
 ```
 
 ```
+http://192.168.32.1/i18n/Messages_en.properties?v=1643166201485
 http://192.168.32.1/index.html#login
 http://192.168.32.1/index.html#change_password
 http://192.168.32.1/index.html#mesh_building
