@@ -1,0 +1,57 @@
+[A little update on available modes and how to switch:]
+
+The following URLs can be called, when the modem is pingable at it’s default IP address 192.168.0.1. If the switched mode doesn’t leave the modem in a pingable state, the method to revert to CDC mode is described below.
+
+MODEM mode:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=0
+results in 19d2:0016 ZTE WCDMA Technologies MSM
+pingable: no
+revert to CDC: Step 3.2 in this article
+Unknown mode 19d2:2004:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=2
+results in 19d2:2004 ZTE WCDMA Technologies MSM
+pingable:no
+revert to 1225,1405: unplug and replug
+RNDIS mode:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=3
+results in 19d2:1403 ZTE WCDMA Technologies MSM
+pingable:yes
+quite the same with http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=4
+CDC mode:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=5
+results in 19d2:1405 ZTE WCDMA Technologies MSM (cdc)
+pingable:yes
+ADB mode:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=6
+results in 19d2:1404 ZTE WCDMA Technologies MSM
+pingable:yes
+Unknown mode 19d2:1244
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=7
+results in 19d2:1244 ZTE WCDMA Technologies MSM
+pingable:no
+revert to 1225,1405: unplug and replug
+QMI mode:
+http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=8
+results in 19d2:1402 ZTE WCDMA Technologies MSM
+pingable:no
+revert to 1225,1405: unplug and replug
+Again, the russian forum 4pda (спасибо, друзья!) has some more information on available modes for the similar MF823 and MF830 modems. See here: https://4pda.ru/forum/index.php?showtopic=555876&st=1400
+
+Let me repeat that translated and corrected info for your convenience:
+
+Base URL is http://192.168.0.1/goform/goform_set_cmd_process?goformId=USB_MODE_SWITCH&usb_mode=N
+
+N can be one of the following values:
+
+0 – PID = 0016: ZTE download mode. Corresponds to AT+ZCDRUN=E.
+1 – PID = 1225: Mass Storage Device (MSD), corresponds to AT+ZCDRUN=9 in combination with AT+ZCDRUN=F.
+2 – PID = 2004: Unclear: similar to MSD like mode 1225 without card reader function. Probably for compatibility with other operating systems.
+N=3 – PID = 1403: RNDIS + MSD. Corresponds to AT+ZCDRUN=8 in combination with AT+ZCDRUN=F.
+N=4 – PID = 1403: just the same as N=3 ->19d2:1403
+N=5 – PID = 1405: CDC/ECM mode instead of RNDIS.
+N=6 – PID = 1404: RNDIS + diagnostic port + two COM ports + MSD + ADB interface (MF8230ZTED010000).
+N=7 – PID = 1244: CDC + diagnostic port + two COM ports + MSD + ADB (MF8230ZTED010000).
+N=8 – PID = 1402: diagnostic port + two COM ports + WWAN adapter + MSD + ADB (1234567890ABCDEF).
+N=9 – PID = 9994: MBIM + diagnostic port + two COM ports + ADB (1234567890ABCDEF).
+
+ 
